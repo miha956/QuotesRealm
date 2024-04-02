@@ -31,6 +31,7 @@ class CategoriesTableViewController: UIViewController {
         super.viewDidLoad()
         catigoties = realmManager!.fetchQuotesByCatigory()
         setupView()
+        title = "Catigoties"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,7 +73,9 @@ extension CategoriesTableViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let vc = QuotesListViewController()
+        let catigory = catigoties[indexPath.row]
         let quotes = Array(catigoties[indexPath.row].quotes)
+        vc.title = catigory.name
         vc.quotes = quotes
         navigationController?.pushViewController(vc, animated: true)
     }
