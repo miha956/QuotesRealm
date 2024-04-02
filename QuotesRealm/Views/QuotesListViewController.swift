@@ -10,7 +10,6 @@ import UIKit
 class QuotesListViewController: UIViewController {
     
     // MARK: Properties
-    var networkManager: NetworkManagerProtocol?
     var realmManager: RealmManagerProtocol?
     var quotes: [Quote] = [] {
         didSet {
@@ -40,6 +39,10 @@ class QuotesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
     private func setupView() {
@@ -73,12 +76,7 @@ class QuotesListViewController: UIViewController {
     }
     
     @objc func addQuoteButtonTapped() {
-        networkManager?.fetchData(complition: { error in
-            guard let error = error else { return }
-            print(error)
-        })
         quotes = realmManager!.fetchAllQuotes()
-        tableView.reloadData()
     }
 }
 

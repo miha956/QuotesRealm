@@ -19,11 +19,12 @@ class MainViewController: UITabBarController {
     private func setupView() {
         
         self.tabBar.tintColor = .black
-        let realmManager = RealmManager()
+        
         let networkManager = NetworkManager()
+        let realmManager = RealmManager()
+        realmManager.networkManager = networkManager
         networkManager.realmManager = realmManager
         let quotesView = QuotesListViewController()
-        quotesView.networkManager = networkManager
         quotesView.realmManager = realmManager
         let categoriesView = CategoriesTableViewController()
         categoriesView.realmManager = realmManager

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9D7985F2BBC7C6500E3DDF8 /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D7985E2BBC7C6500E3DDF8 /* KeychainStorage.swift */; };
+		A9D798622BBC7CEC00E3DDF8 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A9D798612BBC7CEC00E3DDF8 /* KeychainSwift */; };
 		A9E305792BB048900087173E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E305782BB048900087173E /* AppDelegate.swift */; };
 		A9E3057B2BB048900087173E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E3057A2BB048900087173E /* SceneDelegate.swift */; };
 		A9E3057D2BB048900087173E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E3057C2BB048900087173E /* MainViewController.swift */; };
@@ -23,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A9D7985E2BBC7C6500E3DDF8 /* KeychainStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
 		A9E305752BB048900087173E /* QuotesRealm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuotesRealm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E305782BB048900087173E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9E3057A2BB048900087173E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D798622BBC7CEC00E3DDF8 /* KeychainSwift in Frameworks */,
 				A9E305902BB04A360087173E /* RealmSwift in Frameworks */,
 				A9E3058E2BB04A360087173E /* Realm in Frameworks */,
 			);
@@ -122,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				A9E305A02BB060BA0087173E /* RealmManager.swift */,
+				A9D7985E2BBC7C6500E3DDF8 /* KeychainStorage.swift */,
 			);
 			path = RealmManager;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			packageProductDependencies = (
 				A9E3058D2BB04A360087173E /* Realm */,
 				A9E3058F2BB04A360087173E /* RealmSwift */,
+				A9D798612BBC7CEC00E3DDF8 /* KeychainSwift */,
 			);
 			productName = QuotesRealm;
 			productReference = A9E305752BB048900087173E /* QuotesRealm.app */;
@@ -176,6 +182,7 @@
 			mainGroup = A9E3056C2BB048900087173E;
 			packageReferences = (
 				A9E3058C2BB04A360087173E /* XCRemoteSwiftPackageReference "realm-swift" */,
+				A9D798602BBC7CEC00E3DDF8 /* XCRemoteSwiftPackageReference "keychain-swift" */,
 			);
 			productRefGroup = A9E305762BB048900087173E /* Products */;
 			projectDirPath = "";
@@ -210,6 +217,7 @@
 				A9E3059F2BB05FE00087173E /* NetworkManager.swift in Sources */,
 				A9E305A12BB060BA0087173E /* RealmManager.swift in Sources */,
 				A9E305792BB048900087173E /* AppDelegate.swift in Sources */,
+				A9D7985F2BBC7C6500E3DDF8 /* KeychainStorage.swift in Sources */,
 				A9E3057B2BB048900087173E /* SceneDelegate.swift in Sources */,
 				A9E305932BB04FF90087173E /* CategoriesTableViewController.swift in Sources */,
 			);
@@ -426,6 +434,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A9D798602BBC7CEC00E3DDF8 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 21.0.0;
+			};
+		};
 		A9E3058C2BB04A360087173E /* XCRemoteSwiftPackageReference "realm-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/realm/realm-swift.git";
@@ -437,6 +453,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A9D798612BBC7CEC00E3DDF8 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9D798602BBC7CEC00E3DDF8 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
 		A9E3058D2BB04A360087173E /* Realm */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A9E3058C2BB04A360087173E /* XCRemoteSwiftPackageReference "realm-swift" */;
